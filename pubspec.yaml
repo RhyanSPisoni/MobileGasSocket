@@ -7,8 +7,11 @@ environment:
   sdk: '>=3.0.5 <4.0.0'
 
 dependencies:
+  cupertino_icons: ^1.0.5
   flutter:
     sdk: flutter
+  http: ^1.1.0
+  shared_preferences: ^2.1.2
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +20,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/fogo.gif
+    - assets/safe.gif

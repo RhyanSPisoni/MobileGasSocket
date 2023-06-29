@@ -1,11 +1,15 @@
-class Item {
-  late String title;
-  late bool done; // Propriedade 'done' marcada como 'late'
+class item {
+  bool? done;
 
-  Item({required this.title, required this.done});
+  item({this.done});
 
-  Item.fromJson(Map<String, dynamic> json) {
-    title = json['title'];
+  item.fromJson(Map<String, dynamic> json) {
     done = json['done'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['done'] = this.done;
+    return data;
   }
 }
